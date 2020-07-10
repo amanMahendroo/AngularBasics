@@ -1,3 +1,15 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+	<div class="title">
+		Angular to-do List
+	</div>
+	<div class="list">
+		<div class="items">
+			<div class="item" *ngFor="let item of list; let i = index" (click)="remove(i)">
+				{{item}}
+			</div>
+		</div>
+		<div class="item input">
+			<input type="text" name="adder" placeholder="Add new" id="new" (keydown)="add($event)" />
+		</div>
+	</div>
+</div>

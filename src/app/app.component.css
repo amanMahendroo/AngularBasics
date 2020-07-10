@@ -1,1 +1,53 @@
 /* CSS components */
+
+.container {
+	background: var(--back);
+	color: var(--text);
+	font-family: Segoe UI;
+	position: absolute;
+	width: 70vw;
+	left: 15vw;
+}
+
+.title {
+	font-size: 2em;
+	text-align: center;
+	height: 75px;
+	line-height: 75px;
+}
+
+.list {
+	margin: 0;
+}
+
+.items {
+	max-height: calc(100vh - 125px);
+	overflow-y: scroll;
+}
+
+.item {
+	list-style-type: none;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 25px;
+	transition: .15s all ease;
+	cursor: pointer;
+}
+
+.item:hover {
+	background: var(--hover);
+}
+
+.input {
+	background: var(--back);
+}
+
+input {
+	background: transparent;
+	border: 0;
+	outline: 0;
+	width: calc(100vw - 50px);
+	font-family: Segoe UI;
+	/*height: 40px;*/
+	font-size: 1.2em;
+}

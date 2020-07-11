@@ -3,7 +3,7 @@
 .container {
 	background: var(--back);
 	color: var(--text);
-	font-family: Segoe UI;
+	font-family: 'Roboto', sans-serif;
 	position: absolute;
 	width: 70vw;
 	left: 15vw;
@@ -14,6 +14,7 @@
 	text-align: center;
 	height: 75px;
 	line-height: 75px;
+	border-bottom: 1px solid var(--hover);
 }
 
 .list {
@@ -29,25 +30,63 @@
 	list-style-type: none;
 	height: 50px;
 	line-height: 50px;
-	padding: 0 25px;
 	transition: .15s all ease;
 	cursor: pointer;
+	display: flex;
+	justify-content: space-around;
 }
 
-.item:hover {
-	background: var(--hover);
+.content {
+	width: calc(100% - 50px);
+	padding: 0 25px;
+	margin: 0;
+	float: left;
+}
+
+.content:hover {
+	background: linear-gradient(to right, var(--hover), transparent);
 }
 
 .input {
 	background: var(--back);
+	border-top: 1px solid var(--hover);
 }
+
+.status {
+	width: 200px;
+	height: 50px;
+	float: right;
+	z-index: 100;
+	display: flex;
+	justify-content: space-around;
+}
+
+.status div {
+	width: 35px;
+	height: 31px;
+	margin: 7.5px;
+	border-radius: 10px;
+	transition: .15s all ease;
+}
+
+.green { color: #0f8; }
+.yellow { color: #ff0; }
+.amber { color: #f80; }
+.red { color: #f00; }
 
 input {
 	background: transparent;
 	border: 0;
 	outline: 0;
 	width: calc(100vw - 50px);
-	font-family: Segoe UI;
-	/*height: 40px;*/
+	font-family: 'Roboto', sans-serif;
 	font-size: 1.2em;
+	color: var(--text);
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+	.container {
+		left: 0;
+		width: 100vw;
+	}
 }

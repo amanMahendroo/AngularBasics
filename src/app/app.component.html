@@ -4,12 +4,30 @@
 	</div>
 	<div class="list">
 		<div class="items">
-			<div class="item" *ngFor="let item of list; let i = index" (click)="remove(i)">
-				{{item}}
+			<div class="item" *ngFor="let item of list; let i = index" [ngStyle]="{'border-left': list[i].color }">
+				<div class="content"(click)="remove(i)">
+					{{ item.content }}
+				</div>
+				<div class="status">
+					<div class="green" (click)="addStat(i, 1)">
+						<i class="fa fa-circle-o-notch fa-2x"></i>
+					</div>
+					<div class="yellow" (click)="addStat(i, 2)">
+						<i class="fa fa-circle-o-notch fa-2x"></i>
+					</div>
+					<div class="amber" (click)="addStat(i, 3)">
+						<i class="fa fa-circle-o-notch fa-2x"></i>
+					</div>
+					<div class="red" (click)="addStat(i, 4)">
+						<i class="fa fa-circle-o-notch fa-2x"></i>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="item input">
-			<input type="text" name="adder" placeholder="Add new" id="new" (keydown)="add($event)" />
+			<div class="content">				
+				<input type="text" name="adder" placeholder="Add new" id="new" (keydown)="add($event)" />
+			</div>
 		</div>
 	</div>
 </div>

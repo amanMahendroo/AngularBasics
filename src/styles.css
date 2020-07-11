@@ -5,12 +5,19 @@
 }
 
 :root {
+	--back: #111;
+	--text: #fff;
+	--hover: #333;
+}
+
+/*:root {
 	--back: #eee;
 	--text: #333;
 	--hover: #ddd;
 }
-
+*/
 body {
 	margin: 0;
 	overflow-x: hidden;
+	user-select: none;
 }

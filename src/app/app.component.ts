@@ -8,16 +8,17 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 	title = 'AngularBasics';
-	list = [{content: "1", status: 0, color: "transparent"}]
-	colors = ["transparent", "#0f8", "#ff0", "#f80", "#f00"]
-
+	lorem = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+	list = [{content: this.lorem, status: 0, color: "5px solid #333"}]
+	colors = ["#333", "#0f8", "#ff0", "#f80", "#f00"]
+	
 	remove(index) {
 		this.list.splice(index, 1)
 	}
 
 	add(event) {
 		if (event.keyCode == 13 && event.target.value.length > 0) {
-			this.list.push({content: event.target.value, status: 0, color: "transparent"})
+			this.list.push({content: event.target.value, status: 0, color: "5px solid #333"})
 			event.target.value = ""
 		}
 	}

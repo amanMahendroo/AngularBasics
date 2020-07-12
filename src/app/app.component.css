@@ -22,14 +22,14 @@
 }
 
 .items {
-	max-height: calc(100vh - 125px);
+	height: calc(100vh - 125px);
 	overflow-y: scroll;
 }
 
 .item {
 	list-style-type: none;
-	height: 50px;
-	line-height: 50px;
+	/*min-height: 50px;*/
+	line-height: 25px;
 	transition: .15s all ease;
 	cursor: pointer;
 	display: flex;
@@ -38,7 +38,7 @@
 
 .content {
 	width: calc(100% - 50px);
-	padding: 0 25px;
+	padding: 15px 25px;
 	margin: 0;
 	float: left;
 }
@@ -50,12 +50,18 @@
 .input {
 	background: var(--back);
 	border-top: 1px solid var(--hover);
+	line-height: 50px;
+}
+
+.input .content {
+	padding: 0 25px;
 }
 
 .status {
-	width: 200px;
+	width: 250px;
 	height: 50px;
 	float: right;
+	margin: 10px 10px 0 0;
 	z-index: 100;
 	display: flex;
 	justify-content: space-around;
@@ -69,6 +75,7 @@
 	transition: .15s all ease;
 }
 
+.grey { color: #333; }
 .green { color: #0f8; }
 .yellow { color: #ff0; }
 .amber { color: #f80; }
@@ -88,5 +95,9 @@ input {
 	.container {
 		left: 0;
 		width: 100vw;
+	}
+
+	.item {
+		display: block;
 	}
 }

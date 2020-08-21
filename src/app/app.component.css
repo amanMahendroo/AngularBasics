@@ -5,8 +5,7 @@
 	color: var(--text);
 	font-family: 'Roboto', sans-serif;
 	position: absolute;
-	width: 70vw;
-	left: 15vw;
+	width: 100vw;
 }
 
 .title {
